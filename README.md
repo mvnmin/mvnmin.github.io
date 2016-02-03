@@ -1,0 +1,2 @@
+# mvnmin.github.io
+test
