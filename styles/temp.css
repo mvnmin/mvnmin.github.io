@@ -1,0 +1,9 @@
+div#container {
+    margin: -8px -8px;
+    width: 102%;
+    height: auto;
+}
+
+svg#main {
+    max-width: 100%;
+}
