@@ -36,7 +36,7 @@ class Movie {
 			.to(this.actors.redRect, 1, {autoAlpha:1, ease: Linear.easeNone})
 			.set(this.actors.redRect,{rotation:0, scale:1, transformOrigin: 'center top'})
 			.to(this.actors.redRect, 1.6, {
-				bezier: { type: 'soft', values: [{x:-100,y:-100},{x:-104,y:-40},{x:-100,y:-0},{x:-144,y:-55}], autoRotate: false},
+				bezier: { type: 'soft', values: [{x:0,y:-200},{x:0,y:-140},{x:0,y:-240},{x:0,y:0}], autoRotate: false},
 				transformOrigin: 'center top',
 				scale:1 })
 			//.to(this.actors.redRect, 0.6, {scaleX: 0.7, transformOrigin:'center top'}, '-=0.75')
