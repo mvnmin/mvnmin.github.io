@@ -2,7 +2,6 @@ class Movie {
 
 	constructor() {
 		this. masterTl = new TimelineMax({delay: 1});
-		/* this.cfaTheme = new buzz.sound("../fonts/glass_ping.mp3", {preload: true, autoplay: false, loop: false}); */
 		this.actors = {
 			videoMovie: document.querySelector("#video"),
 			usaMap: document.querySelector("#map"),
@@ -19,36 +18,12 @@ class Movie {
 
 		clearTl
 			//.set(this.actors.videoMovie, { autoAlpha: 0})
-			.set(this.actors.usaMap, { autoAlpha: 0})
 			.set(this.actors.replayText, { autoAlpha: 0})
 			.set(this.actors.cfaLogo, { autoAlpha: 0})
 			.set(this.actors.redRect, { autoAlpha: 0})
 		;
 
 		return clearTl;
-	}
-
-	//fly wings loop
-	startFly(wing1,wing2,fly, bottomLashes, theme) {
-		//let flyTl = new TimelineMax({repeat:-1, yoyo: true});
-
-		//flyTl.staggerFromTo([wing1, wing2], 0.06, {rotation:-40, transformOrigin:'left bottom'}, {rotation:30, transformOrigin:'left bottom'}, 0.01);
-
-		// quivers ...
-		function redoQuiver(fly) {
-			TweenMax.to(fly, 0.2, {x: Math.random()*6 -3, y:Math.random()*6 -3, onComplete: redoQuiver, onCompleteParams: [fly]});
-		}
-		redoQuiver(fly);
-
-		function lashQuiver(bottomLashes) {
-			TweenMax.staggerTo(bottomLashes, 0.2, {rotation:Math.random()*2 -1, transformOrigin:'right bottom', onComplete: lashQuiver, onCompleteParams: [bottomLashes]}, 0.01);
-		}
-		lashQuiver(bottomLashes);
-
-		//start playing the sound
-		if(theme) {
-			theme.play().fadeIn(800);
-		}
 	}
 
 	//animate red_rectangle
@@ -65,7 +40,6 @@ class Movie {
 			//.to(this.actors.redRect, 0.6, {scaleX: 0.7, transformOrigin:'center top'}, '-=0.75')
 			//.to(this.actors.videoMovie, 1, {autoAlpha:1, ease: Linear.easeNone})
 			.to(this.actors.cfaLogo, 1, {autoAlpha:1, ease: Linear.easeNone})
-			.to(this.actors.usaMap, 1, {autoAlpha:1, ease: Linear.easeNone})
 			.to(this.actors.replayText, 1, {autoAlpha:1, ease: Linear.easeNone})
 
 			//start playing the sound
