@@ -97,6 +97,6 @@ class Movie {
 	}
 }
 
-var movie = new Movie();
+var cfaIntro = new Movie();
 
-movie.start();
+cfaIntro.start();
