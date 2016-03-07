@@ -1,0 +1,18 @@
+div#container {
+	margin: -8px -8px;
+	width: 102%;
+	height: auto;
+}
+
+video{
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	min-width: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+
+svg#main {
+	max-width: 100%;
+}
