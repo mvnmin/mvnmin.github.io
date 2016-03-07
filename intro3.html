@@ -10,7 +10,7 @@
   <body>
 	<div id="container">
 
-			<svg id="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 720">
+			<svg id="main" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720">
 			
 				<style type="text/css">
 				<![CDATA[
@@ -19,7 +19,7 @@
 				</style>
 			
 			<g id="red_rectangle">
-				<polygon fill="#ED1C24" points="1080,120 0,200 -10,-10 1080,0 "/>
+				<polygon fill="#ED1C24" points="1280,120 0,200 -10,-10 1280,0 "/>
 			</g>
 			<g id="cfa_logo">
 				<path fill="#FFFFFF" d="M68.578,65.088c-0.045,2.058-2.557,4.571-3.756,2.638c-0.652-1.482,0.988-4.173,2.511-4.223
@@ -110,12 +110,27 @@
 				<source src="touringfinal.mp4" type="video/mp4">
 				<source src="touringfinal.webm" type="video/webm">
 			</video>
-
+			<span id="seconds" style="font-family:arial; font-size:30px; margin-left:90%;">1966</span>
 		</div>
   </body>
   
 	<script type='text/javascript' src="scripts/TweenMax.min.js"></script>
   
 	<script type='text/javascript' src="scripts/intro3.js"></script>
+	
+	<script>
+		var sec = 1967;
+
+		function pad(val) {
+			return val > 9 ? val : "0" + val;
+		}
+		var timer = setInterval(function () {
+			document.getElementById("seconds").innerHTML = pad(++sec );
+		}, 100);
+
+		setTimeout(function () {
+			clearInterval(timer);
+		}, 5000);
+	</script>
   
 </html>
