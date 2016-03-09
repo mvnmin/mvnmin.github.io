@@ -155,7 +155,7 @@ window.onload = function loadTweet() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       tweets = JSON.parse(xhttp.responseText);
       size = Number(tweets.length);
-      newTweet = tweets[tweets.length-1];
+      newTweet = tweets[Math.floor(Math.random()*tweets.length)];
       locateUser = newTweet.tweet.location;
       msDate = Number(newTweet.tweet.timestamp_ms);
       
@@ -233,6 +233,9 @@ var graticule = d3.geo.graticule()
 var svg = d3.select("#pulsate").append("svg")
     .attr("width", width)
     .attr("height", height);
+
+var lat = Math.floor(Math.random() * 300)/500.0;
+var lon = Math.floor(Math.random() * -300)/1000.0;
 
 svg.append("path")
     .datum(graticule)
