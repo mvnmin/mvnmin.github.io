@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
+canvas {
+  position: absolute;
+  top: 150px;
+margin-right:122px;
+margin-left:52px;
+  z-index:30;
+}
 #soundwall-wrapper{
    width:1024px;
   height: 768px;
@@ -16,7 +23,7 @@
   height:150px;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  z-index:30;
+  z-index:20;
 }
 #msg {
   float: left;
@@ -52,12 +59,18 @@ font-weight:700;
   position: absolute;
 }
 #pulsate {
-  z-index: 40;
   width:1024px;
   height: 768px;
   display: block;
   position:absolute;
   z-index:40;
+}
+#points {
+  width:1024px;
+  height: 768px;
+  display: block;
+  position:absolute;
+  z-index:30;
 }
 
 .land {
@@ -103,6 +116,9 @@ font-weight:700;
   font-weight:200;
   color:#FF0000;
 }
+.point {
+  fill: #FF0000;
+}
 </style>
 <body>
 <div id="soundwall-wrapper">
@@ -120,6 +136,7 @@ font-weight:700;
         <div id="time"></div>
     </div>
     <div id="us-map"></div>
+    <div id="fps"></div>
     <div id="pulsate"></div>
 </div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/1.1.29/howler.min.js"></script>
@@ -139,7 +156,7 @@ window.onload = function loadTweet() {
     if (xhttp.readyState == 4 && xhttp.status == 200) {
       tweets = JSON.parse(xhttp.responseText);
       size = Number(tweets.length);
-      newTweet = tweets[3];
+      newTweet = tweets[tweets.length-1];
       locateUser = newTweet.tweet.location;
       msDate = Number(newTweet.tweet.timestamp_ms);
       
@@ -264,16 +281,64 @@ d3.json("https://raw.githubusercontent.com/stamen/ecoengine/master/prototypes/co
       .attr("d", path);
 
   svg.insert("path", ".graticule")
-      .datum(topojson.mesh(us, us.objects.counties, function(a, b) { return a !== b && !(a.id / 1000 ^ b.id / 1000); }))
-      .attr("class", "county-boundary")
-      .attr("d", path);
-
-  svg.insert("path", ".graticule")
       .datum(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; }))
       .attr("class", "state-boundary")
       .attr("d", path);
 });
 
 d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+
+<script>
+
+var data = d3.range(500).map(function() {
+  return {xloc: 0, yloc: 0, xvel: 0, yvel: 0};
+});
+
+var width2 = 850,
+    height2 = 450,
+    angle = 2 * Math.PI;
+
+var x = d3.scale.linear()
+    .domain([-5, 5])
+    .range([0, width2]);
+
+var y = d3.scale.linear()
+    .domain([-5, 5])
+    .range([0, height2]);
+
+var time0 = Date.now(),
+    time1;
+
+var fps = d3.select("#fps span");
+
+var canvas = d3.select("body").append("canvas")
+    .attr("width", width2)
+    .attr("height", height2);
+
+var context = canvas.node().getContext("2d");
+context.fillStyle = "#FF0000";
+context.strokeStyle = "#FF0000";
+context.strokeWidth = 0.5;
+
+d3.timer(function() {
+  context.clearRect(0, 0, width2, height2);
+
+  data.forEach(function(d) {
+    d.xloc += d.xvel;
+    d.yloc += d.yvel;
+    d.xvel += 0.04 * (Math.random() - .5) - 0.05 * d.xvel - 0.0005 * d.xloc;
+    d.yvel += 0.04 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc;
+    context.beginPath();
+    context.arc(x(d.xloc), y(d.yloc), Math.min(1 + 1000 * Math.abs(d.xvel * d.yvel), 10), 0, angle);
+    context.fill();
+    context.stroke();
+  });
+
+  time1 = Date.now();
+  fps.text(Math.round(1000 / (time1 - time0)));
+  time0 = time1;
+});
 
 </script>
