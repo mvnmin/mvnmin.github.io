@@ -142,6 +142,7 @@ window.onload = function loadTweet() {
       newTweet = tweets[3];
       locateUser = newTweet.tweet.location;
       msDate = Number(newTweet.tweet.timestamp_ms);
+      
       function readDate(date) {
         var months = ['Jan', ';Feb', 'Mar', 'Apr', 'May', 'Jun','Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
         var hrs = date.getUTCHours() == 0 ? 12 : (date.getUTCHours() > 12 ? date.getUTCHours() - 12 : date.getUTCHours());
@@ -164,8 +165,15 @@ window.onload = function loadTweet() {
       if (colors.indexOf("@ChickfilA") > -1) {
           str = str.replace(/@ChickfilA/g, '<span style="color:#FF0000; font-weight:700;">@ChickfilA</span>');
       }
-
-
+      else if (colors.indexOf("@EatMorChikin") > -1) {
+          str = str.replace(/@EatMorChikin/g, '<span style="color:#FF0000; font-weight:700;">@EatMorChikin</span>');
+      }
+      else if (colors.indexOf("#eatmorchikin") > -1) {
+          str = str.replace(/#eatmorchikin/g, '<span style="color:#FF0000; font-weight:700;">#eatmorchikin</span>');
+      }
+      else if (colors.indexOf("#chickfila") > -1) {
+          str = str.replace(/#chickfila/g, '<span style="color:#FF0000; font-weight:700;">#chickfila</span>');
+      }
       document.getElementById("time").innerHTML = readableDate;
       document.getElementById("tweet").innerHTML = str;
       document.getElementById("icon").src = "twitter.png";
@@ -177,6 +185,20 @@ window.onload = function loadTweet() {
   xhttp.open("GET", "http://twitter-cfa.mybluemix.net/view-tweets?limit=10", true);
   xhttp.send();
 }
+</script>
+<script>
+var sound = new Howl({
+  urls: ['Build_Heart_Beat_V2.mp3'],
+  autoplay: true,
+  loop: false,
+  volume: 0.5
+});
+var sound2 = new Howl({
+  urls: ['Heart_Beat_V2.mp3'],
+  autoplay: true,
+  loop: true,
+  volume: 0.5
+});  
 </script>
 <script>
 var width = 1024,
