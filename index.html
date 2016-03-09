@@ -3,9 +3,8 @@
 <style>
 canvas {
   position: absolute;
-  top: 150px;
-margin-right:122px;
-margin-left:52px;
+  top: 175px;
+margin-left:170px;
   z-index:30;
 }
 #soundwall-wrapper{
@@ -297,7 +296,7 @@ var data = d3.range(500).map(function() {
 });
 
 var width2 = 850,
-    height2 = 450,
+    height2 = 500
     angle = 2 * Math.PI;
 
 var x = d3.scale.linear()
@@ -328,8 +327,8 @@ d3.timer(function() {
   data.forEach(function(d) {
     d.xloc += d.xvel;
     d.yloc += d.yvel;
-    d.xvel += 0.04 * (Math.random() - .5) - 0.05 * d.xvel - 0.0005 * d.xloc;
-    d.yvel += 0.04 * (Math.random() - .5) - 0.05 * d.yvel - 0.0005 * d.yloc;
+    d.xvel += 0.03 * (Math.random() - .5) - 0.03 * d.xvel - 0.0005 * d.xloc;
+    d.yvel += 0.03 * (Math.random() - .5) - 0.03 * d.yvel - 0.0005 * d.yloc;
     context.beginPath();
     context.arc(x(d.xloc), y(d.yloc), Math.min(1 + 1000 * Math.abs(d.xvel * d.yvel), 10), 0, angle);
     context.fill();
