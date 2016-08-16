@@ -1,1 +1,3 @@
-These are my sides for a presentation while on ATO [At The Office, a Bench-time period]. The slides use an HTML5 framework with Reveal JS. Click the index.html file to view the slides in your browser. You can also view them online at http://mvnmin.github.io/sogeti.
+These are my sides for a presentation while on ATO [At The Office, a Bench-time period]. August 2016
+
+The slides use an HTML5 framework with Reveal JS. Click the index.html file to view the slides in your browser. You can also view them online at http://mvnmin.github.io/sogeti.
