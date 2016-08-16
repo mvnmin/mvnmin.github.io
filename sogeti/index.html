@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Five Minute Drill</title>
+      <meta name="description" content="Myron Netterlund's Five Minute 2016">
+      <meta name="author" content="Myron Netterlund">
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+      <!-- favicon icons -->
+      <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+      <link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+      <link rel="manifest" href="favicon/manifest.json">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#ffffff">
+      <!-- end favicon code -->
+      <link rel="stylesheet" href="css/reveal.css">
+      <!-- <link rel="stylesheet" href="css/theme/beige.css" id="theme"> -->
+      <link rel="stylesheet" href="css/theme/moon-too.css" id="theme">
+      <!-- Code syntax highlighting -->
+      <link rel="stylesheet" href="lib/css/zenburn.css">
+      <!-- Printing and PDF exports -->
+      <script>
+         var link = document.createElement( 'link' );
+         link.rel = 'stylesheet';
+         link.type = 'text/css';
+         link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+         document.getElementsByTagName( 'head' )[0].appendChild( link );
+      </script>
+      <!--[if lt IE 9]>
+      <script src="lib/js/html5shiv.js"></script>
+      <![endif]-->
+      <!-- these are my custom styles. remember that slide sizes scale, so try to use percentages. -->
+      <style>
+      	 .bottomline {
+      	 	font-family: arial; 
+      	 	font-size:0.75em !important; 
+      	 	color:#fff; 
+      	 }
+         p.alignLeft {
+         text-align: left;
+         }
+         span.orange, a.orange {
+         color: orange;
+         outline-color: gray;
+         }
+         span.white, a.white {
+         color: #FFFFFF;
+         outline-color: gray;
+         }
+        div.innovation ul li {
+         margin-bottom:12px;
+         }
+         figcaption {
+         font-size:.8em;
+         }
+/*         p.miscItems {
+         font-size:1.2em;
+         }*/
+         p.jobRoles {
+         font-size:0.65em;
+         /*text-align:left;
+         margin-left:20%;
+         max-width: 65%; */
+         color:#fff;
+         }
+         p.miscItems {
+         font-size:0.85em;
+         text-align:left;
+         margin-left:20%;
+         max-width: 65%;
+         }
+/*         hr {
+         font-size:0.85em;
+         text-align:left;
+         margin-left:20%;
+         max-width: 65%;
+         margin-bottom:-0.5em;
+         color: rgba(0,0,0,.5);
+         }*/
+		hr {
+		    display: block;
+		    height: 1px;
+		    border: 0;
+		    border-top: 1px solid #666;
+		    margin: 1em 3em -0.5em 3em;
+		    padding: 0; 
+		}
+		 .slides section h3 {
+         color: orange !important; outline: gray;
+         }
+         .slides img.shortened {
+         max-width: 80%;
+         max-height: 80%;
+         }
+         #upcoming-slide .label {
+         color: #444 !important
+         }
+         ul.credits li {
+         font-size: .6em;
+         }
+        .background-tint {
+		  background-color: rgba(0,0,0,.65); // Tint color
+		  background-blend-mode: multiply;
+		}
+/*		.background-tint { position: relative; }
+
+		.background-tint::after {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  right: 0;
+		  bottom: 0;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(0,0,0,.65);
+		}*/
+
+      </style>
+      <!-- Note: Make artboard sizes about 775px wide X 445px tall. If the image appears as a vertical navigation, add a class of "shortened" to the image element to reduce its size to 80% -->
+   </head>
+   <body>
+      <div class="reveal innovation">
+         <!-- Any section element inside of this container is displayed as a slide -->
+         <div class="slides">
+            <section>
+               <h1><span class="orange">Consultant</span><br/> five minute drill</h1>
+               <h3>Myron Netterlund </h3>
+               <p>
+                  <small>UX/UI Designer/FrntEnd Developer<br /> Digital Transformation Practice</small>
+               </p>
+               <p>
+                  <small>Created by <a target="_blank" href="http://netterlund.dunked.com">Myron Netterlund</a> / <a target="_blank" href="http://twitter.com/netterlund">@netterlund</a></small>
+               </p>
+               <aside class="notes">
+                  <p>- I've been working here for Sogeti these last 19 months, 2 years in January 2017</p>
+                  <p>- Chose to go a different route in my presentaion this morning, t expand my skill set & demonstrate some kahoonahs</p>
+                  <p>- Hope you find this intereseting & we can succeed together.</p>
+               </aside>
+            </section>
+          
+              <section>
+                  <h2>Keyboard Shortcuts</h2>
+                  <table>
+                     <tr>
+                        <td><b>Full Screen</b></td>
+                        <td>F</td>
+                     </tr>
+                     <tr>
+                        <td><b>Next Slide</b></td>
+                        <td>Space bar</td>
+                     </tr>
+                     <tr>
+                        <td><b>Slide Notes</b></td>
+                        <td>S</td>
+                     </tr>
+                     <tr>
+                        <td><b>Thumbnail View</b></td>
+                        <td>Esc</td>
+                     </tr>
+                  </table>
+                  <p><small>View online at <a target="_blank" href="http://mvnmin.github.io/sogeti">"http://mvnmin.github.io/sogeti</a></small><br/></a></small><br/>
+                  <small><i><b>Note:</b> Some slides move down instead of to the side,<br /> so use the space bar to advance slides.</i></small></p>
+               
+                  <aside class="notes">
+                  <p>Some slides move down instead of to the side, so use the space bar to advance slides.</p>
+                  </aside>
+               </section> 
+             
+            <section data-transition="slide" data-background="#333" data-background-transition="zoom" class="has-dark-background present" style="top: 171.5px; display: block;">
+               <h2>Who's Talking</h2>
+				<ul class="credits">
+                    <li>Senior Consultant</li>
+                  	<li>Front End Web Design | Backend Friendly</li>
+                  	<li>User Experience</li>
+                  	<li>User Interface Design</li>
+                </ul>
+                  <h3 class="fragment">Oral Roberts University</h3>
+                  <p class="fragment">
+                  	<small>Bachelors of Science, ART, duel minor: <br />Graphic Design & Telecommunications</small>
+                  </p>
+               <aside class="notes">
+                  <p>- Task: transition content online.</p>
+               </aside>
+            </section>
+ 
+            <section>
+               <h2><span class="orange">Goal<small>(s)</small></h2>
+	               <p><span class="white">Forwarding my DT Practice in Minneapolis, <br />utilizing my user experience & UI skillset(s) <br />to build the most trusted fulfillment team</span></p>
+	               <p>Deepen my coding/development skills</p>
+	               <p>Broaden client partnerships & working team unity</p>
+               <aside class="notes">
+                  <p>Career goals expressed here in light of Sogeti's own mission statement</p>
+               </aside>
+            </section>
+            <section>
+               <h2><img src="media/rasters/Sogeti-spade_75x36.png"/>Engagements</h2>
+               <section>
+                  <h3>Ameritas | Lincoln, NE </h3>
+                  <p class="jobRoles">ROLE: UX/UI Designer | Web Developer </p>
+				  <img src="media/rasters/ameritas.png"/>
+                  <p class="miscItems">HTML5 &bull; Bootstrap &bull; CSS media queries &bull; jQuery &bull; continuous integration &bull; YouTube &bull; Github &bull; HubSpot &bull; Eclipse IDE
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">IBM - WCM Integration, First Sogeti UX experience</p>
+                  <aside class="notes">
+                     <p>- Thriving tech innovation is unprecedented.</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>MidAmerican Energy | Des Moines, IA </h3>
+                  <p class="jobRoles">ROLE: Digital Strategist | UX/UI Consultant </p>
+				  <img src="media/rasters/midamerican.png"/>
+                  <p class="miscItems">C-Suite Egagement that led to winning a year-long development contract &bull; InDesign content presentation & PDF document deliverable
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Non-bias strategy consultation that led to <br />our being chosen as developers of choice</p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>Best Buy | Richfield, MN </h3>
+                  <p class="jobRoles">ROLE: Digital Strategist | Business Analyst | Vendor Liason </p>
+				  <img src="media/vectors/best_buy.svg"/>
+                  <p class="miscItems">'Senior Level' consultants requested for this technology review of online Chat providers &bull; <i>"Hit it outta the park!"</i>, said our sponsor &bull; Conducted phone, 1:1 & onsite interviews
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Demonstrated Consultant Flexibility</p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>Chick-fil-A | Atlanta, GA</h3>
+                  <p class="jobRoles">ROLE: UI Designer | Mobile App</p>
+				  <img src="media/rasters/chick-fil-a.png"/>
+				  <p class="miscItems">hi-fidelity wireframes for client approval & offshore standards &bull; reuseable template created for Sogeti wireframes &bull; #Slack &bull; Agile
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Hi-Fidelity Mobile Wireframes & Agile workflow <br />Android & iOS</p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>Chick-fil-A | 2.0 remote </h3>
+                  <p class="jobRoles">ROLE: Proof of Concept | Video Wall</p>
+				  <img src="media/rasters/chick-fil-a-pop.png"/>
+				  <p class="miscItems">Power BI explored for use in data visualization of Chick-fil-A's video wall &bull; Concept documents & remote agile-like development with remote team-members
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Data Visualzation experience: PowerBI, D3.js, & SVGs </p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>T Rowe Price | Baltimore, MD</h3>
+                  <p class="jobRoles">ROLE: UX/UI Designer | Health Plan </p>
+				  <img src="media/rasters/t_rowe_price-window.png"/>
+				  <p class="miscItems">Client request of UX for Health Plan web application build-out &bull; Branded Style Guide created for MicroStrategy conformance &bull; 
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Introduction to MicroStrategy & HighCharts.js <br />Designing for MicroStrategy chart specifications</p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+               <section>
+                  <h3>Ecolab | Eagan, MN</h3>
+                  <p class="jobRoles">ROLE: UI Designer | Dashboard Designs </p>
+				  <img src="media/rasters/ecolab.png"/>
+                  <p class="miscItems">Data visualization dashboard designs & client UX &bull; Style guide for charts, "Chicken Chiller" gauge
+                  </p>
+                  <hr>
+                  <p class="bottomline fragment">Pure javascript development on ECL's "Chicken Chiller" guage <br /> Used HighCharts.js for traditional data charting</p>
+                  <aside class="notes">
+                     <p>- Notes</p>
+                  </aside>
+               </section>
+            </section>
+
+            </section>
+            <section>
+               <h2>Strengths And Skills</h2>
+                  <p class="miscItems">&bull; Presentation (obviously)</p>
+                  <p class="miscItems">&bull; People skills (good in the conference room)</p>
+                  <p class="miscItems">&bull; Flexible/ Versitile</p>
+               <h3>In-Demand Skills</h3>
+                  <p class="miscItems">&bull; JS Frameworks: Angular, Polymer</p>
+                  <hr>
+                  <p class="bottomline">I love to learn, I expect to be challenged.</p>
+               <aside class="notes">
+                  <p>- Notes</p>
+               </aside>
+            </section>
+
+            <section data-transition="convex">
+               <h2>What I'm Looking For</h2>
+                  <p class="miscItems">&bull; The right client-match for my skill-set </p>
+                  <p class="miscItems">&bull; Market profitability / Team Leverage</p>
+                  <p class="miscItems">&bull; Flexible / Versitile | True Agile</p>
+               <h3>Career & Self Development</h3>
+                  <p class="miscItems">&bull; Front End Professional & Back End Friendly</p>
+                  <hr>
+                  <p class="bottomline"> </p>
+               <aside class="notes">
+                  <p>- Notes</p>
+               </aside>
+            </section>
+
+            <section>
+               <h1>Thanks!</h1>
+               <section>
+                  <h3>Contact info</h3>
+                  <ul>
+                     <li>Portfolio: <a class="orange" href="http://netterlund.dunked.com">netterlund.dunked.com</a></li>
+                     <li>Twitter: <a class="orange" href="http://twitter.com/netterlund">@netterlund</a></li>
+                     <li>GitHub for slides: <a class="orange" href="https://github.com/mvnmin/sogeti">github.com/mvnmin/sogeti</a></li>
+                     <li> Email: <a class="orange" href="mailto:myron.netterlund@us.sogeti.com">myron.netterlund@us.sogeti.com</a></li>
+                  </ul>
+               </section>
+               <section>
+                  <h3>Credits</h3>
+                  <ul class="credits">
+                     <li>Slide framework from Reveal JS</li>
+                     <li>Some vectors come from Vecteezy.com</li>
+                     <li>Theory of Disruptive Innovation, Clay Christiansen. <i>The Innovator's Dilemma</i></li>
+                     <li>Microsoft is very interesting again -- very, by Jason Calicanus. <a href="https://www.linkedin.com/pulse/microsoft-interesting-again-very-jason-calacanis">Linkedin</a></li>
+                  </ul>
+               </section>
+            </section>
+         </div>
+      </div>
+      <script src="lib/js/head.min.js"></script>
+      <script src="js/reveal.js"></script>
+      <script>
+         // Full list of configuration options available at:
+         // https://github.com/hakimel/reveal.js#configuration
+         Reveal.initialize({
+          controls: true,
+          progress: true,
+          history: true,
+          center: false,
+          slideNumber: true, 
+         
+         
+          transition: 'slide', // none/fade/slide/convex/concave/zoom
+         
+          // Optional reveal.js plugins
+          dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+          ]
+         });
+         
+      </script>
+   </body>
+</html>
