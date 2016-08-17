@@ -11,3 +11,5 @@ Working on 'blending' the best of PowerBI's 3D animation & SVG/D3's branding.
 <p>03-08-2016 - SVG CFA intro4 | <a href="http://mvnmin.github.io/intro4.html" target="_blank">intro4.html </a></p>
 
 <p>03-09-2016 - PoC1 to be included for presentation | <a href="http://mvnmin.github.io/index.html" target="_blank">index.html </a></p>
+
+<p>08-16-2016 - Consultant TEN Minute presentation | <a href="http://mvnmin.github.io/sogeti/" target="_blank">PRESENTATION </a></p>
