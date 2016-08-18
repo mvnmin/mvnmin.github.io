@@ -13,3 +13,6 @@ Working on 'blending' the best of PowerBI's 3D animation & SVG/D3's branding.
 <p>03-09-2016 - PoC1 to be included for presentation | <a href="http://mvnmin.github.io/index.html" target="_blank">index.html </a></p>
 
 <p>08-16-2016 - Consultant TEN Minute presentation | <a href="http://mvnmin.github.io/sogeti/" target="_blank">PRESENTATION </a></p>
+
+<p>08-18-2016 - Added #SLACK integration, #Build</p>
+
